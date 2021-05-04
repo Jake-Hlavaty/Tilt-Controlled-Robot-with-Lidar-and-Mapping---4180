@@ -20,11 +20,44 @@ Additionally, the Adafruit Bluefruit mobile application can be used to control t
 8. TI TPA2005D1 class D audio amp chip - https://www.sparkfun.com/products/11044 
 9. Sparkfun Black Robot Kit - https://os.mbed.com/users/4180_1/notebook/shadow-robot-kit/ 
 
-| Bluetooth  | mbed | Battery |
-| ---------- | ---- | ------- |
-|    GND     |  GND |         |
-|    Vin     |      |   5V    |
-|    CTS     |  GND |         |
-|    TXO     |  p14 |         |
-|    RXI     |  p13 |         |
-|    RTS     |  nc  |         |
+### Pin Layout
+
+##### Bluetooth
+
+| Bluetooth  | mbed1 | Battery |
+| ---------- | ----- | ------- |
+|    GND     |  GND  |         |
+|    Vin     |       |   5V    |
+|    CTS     |  GND  |         |
+|    TXO     |  p14  |         |
+|    RXI     |  p13  |         |
+|    RTS     |  nc   |         |
+
+##### H-Bridge and Motors
+
+| H-Bridge  | mbed1 | Right Motor | Left Motor | Battery |
+| --------- | ----- | ----------- | ---------- | ------- |
+|    VM     |       |             |            |    +    |
+|    VCC    | VOUT  |             |            |         |
+|    GND    | GND   |             |            |         |
+|    STBY   | VOUT  |             |            |         |
+|    PWMA   | p22   |             |            |         |
+|    AIN1   | p8    |             |            |         |
+|    AIN2   | p11   |             |            |         |
+|    AO1    |       |     +       |            |         |
+|    AO2    |       |     -       |            |         |
+|    PWMB   | p21   |             |            |         |
+|    BIN1   | p15   |             |            |         |
+|    BIN2   | p16   |             |            |         |
+|    BO1    |       |             |     +      |         |
+|    BO2    |       |             |     -      |         |
+
+##### Lidar
+
+| Lidar | mbed1 |
+| ----- | ----- |
+|  GND  |  GND  |
+|  SDA  |  p28  |
+|  SCL  |  p27  |
+|  SHDN |  p25  |
+|  VIN  | Vout  |
