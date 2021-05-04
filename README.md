@@ -9,8 +9,14 @@ Using the Adafruit Bluefruit mobile application, a user can connect to the bluet
 
 Additionally, the Adafruit Bluefruit mobile application can be used to control the robot via tilt controls. Upon pressing the button labeled 1, the robot will switch into tilt control mode. This mode allows for much more freedom in movement and functions similarly to a steering wheel on a car. Unlike a steering wheel, this mode also allows you to utilize tilt to adjust the speed of the robot as well. Upon passing a threshold, the robot will calculate its forward or backward velocity based on the tilt of the phone forward or backwards. Then, using trigonometry, the speed of an individual wheel is scaled based on the tilt of the phone left or right allowing the car to take wider or sharper turns as needed. As mentioned before, the car will not allow you to move forward if the lidar senses an object is present. As such, this movement mode provides the operator with more precise turning and speed control allowing for smoother movement and more continuous movement.
 
+### Mapping Functionality
+
+
+### Additional Peripherals 
+//If we add speaker, lights etc, we can right about them here along with Lidar functionality
+
 ### Components List:
-1. Mbed Microcontroller (LPC1768) - https://www.sparkfun.com/products/9564 
+1. Two mbed Microcontroller (LPC1768) - https://www.sparkfun.com/products/9564 
 2. Two DC motors for controlling Left and Right wheels - https://www.sparkfun.com/products/13302 
 3. H-Bridge: TB6612FNG Breakout - https://os.mbed.com/users/4180_1/notebook/relays1/ 
 4. Adafruit Bluefruit LE UART Friend - Bluetooth - https://learn.adafruit.com/introducing-the-adafruit-bluefruit-le-uart-friend 
@@ -20,7 +26,9 @@ Additionally, the Adafruit Bluefruit mobile application can be used to control t
 8. TI TPA2005D1 class D audio amp chip - https://www.sparkfun.com/products/11044 
 9. Sparkfun Black Robot Kit - https://os.mbed.com/users/4180_1/notebook/shadow-robot-kit/ 
 
-### Pin Layout
+### Pin Layouts
+
+#### *Note that the uLCD and IMU run off of mbed2 for additional serial ports*
 
 ##### Bluetooth
 
@@ -61,3 +69,28 @@ Additionally, the Adafruit Bluefruit mobile application can be used to control t
 |  SCL  |  p27  |
 |  SHDN |  p25  |
 |  VIN  | Vout  |
+
+##### uLCD
+
+| mbed2 | uLCD | Battery |
+| ----- | ---- | ------- |
+|  5V   |      |    +    |
+|  GND  |  GND |         |
+|  p9   |  TX  |         |
+|  p10  |  RX  |         |
+|  p11  | Reset|         |
+
+##### IMU
+
+| mbed2 | IMU |
+| ----- | --- |
+| 3.3V  | VDD |
+|  GND  | GND |
+|  p28  | SDA |
+|  p27  | SCL |
+
+### Block Diagram
+//Will add once we figure out speakers / other periherals
+
+### Final Notes
+Given the relatively short timeline of the project, we were overal very happy with the resulting finl project. Using tilt controls as an additional feature to control the DC motors of the robot felt very robust and innovative. Given more time, we would like to further hone in on this aspect of the design for improved accuracy and more lifeline driving capability. Further, we would like to explore aspects such as energy efficency inside multiple threads to maximize the runtime efficency of our robot and mimimize possible delay errors.
