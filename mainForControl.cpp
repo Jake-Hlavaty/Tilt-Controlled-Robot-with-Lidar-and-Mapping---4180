@@ -1,3 +1,8 @@
+/* 
+This cpp file contains all the implmentations necessary to control the vehicle with Dpad and Tilt using the Adafruit mobile app. 
+This file also contains the implmentations required for head-on collision avoidance.
+*/
+
 #include "mbed.h"
 #include "Motor.h"
 #include "XNucleo53L0A1.h"
