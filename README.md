@@ -14,9 +14,6 @@ Additionally, the Adafruit Bluefruit mobile application can be used to control t
 On a separate MBED device, we have added a function to help map the cars surroundings and track its movement. We use the IMU’s accelerometer to calculate acceleration in the x and y direction. We then use a Timer to measure how long this acceleration took place. Using kinematics formulas, we are then able to measure the change in velocity and in distance using vf = vi + a * t, and d = vi * t + .5 * a * t^2. Although the initial measurements are in g’s, we convert to meters, then feet, then set a pixel to feet ratio. To account for the changes in rotation, we use the magnetometer to measure the magnetic force and convert these values into the heading in radians. We use the initial heading and the current heading to calculate the change in rotation, and we then rotate the velocity vector and the distance vector accordingly at each iteration. Although our methodology on paper seems like it should work, the IMU is not always accurate, and every slight calculation error causes a domino effect which can cause errors in the graph. Additionally, if the IMU is tilted, the Earth’s gravity gets measured as acceleration and can cause errors in the graph.
 
 
-### Additional Peripherals 
-//If we add speaker, lights etc, we can right about them here along with Lidar functionality
-
 ### Components List:
 1. Two mbed Microcontroller (LPC1768) - https://www.sparkfun.com/products/9564 
 2. Two DC motors for controlling Left and Right wheels - https://www.sparkfun.com/products/13302 
