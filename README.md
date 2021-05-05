@@ -89,7 +89,10 @@ On a separate MBED device, we have added a function to help map the cars surroun
 |  p27  | SCL |
 
 ### Block Diagram
-//Will add once we figure out speakers / other periherals
+
+![image](https://user-images.githubusercontent.com/83670606/117174145-6a4e8900-ad9b-11eb-8931-d6c8902cd33b.png)
+
 
 ### Final Notes
 Given the relatively short timeline of the project, we were overal very happy with the resulting finl project. Using tilt controls as an additional feature to control the DC motors of the robot felt very robust and innovative. Given more time, we would like to further hone in on this aspect of the design for improved accuracy and more lifeline driving capability. Further, we would like to explore aspects such as energy efficency inside multiple threads to maximize the runtime efficency of our robot and mimimize possible delay errors.
+![Uploading image.png…]()
