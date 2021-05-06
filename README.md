@@ -1,4 +1,4 @@
-# Tilt-Controlled-Robot-with-Lidar-and-Mapping-4180
+# Tilt-Controlled Robot with Lidar and Mapping 4180
 
 The purpose of this project is to create a Bluetooth controlled robot that can be controlled through various methods and will collect orthometric data based on distance travelled, to be displayed on a uLCD screen. Further, the robot is designed to be intelligent enough to avoid collision using lidar readings to not only prevent forward movement, but also utilize this data to help map the environment it is in on the uLCD screen. All features are controlled using the arm mbed LPC1768 processor and accompanying peripherals located in the components portion of this guide.  
 
